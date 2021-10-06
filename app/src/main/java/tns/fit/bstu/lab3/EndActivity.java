@@ -173,14 +173,14 @@ public class EndActivity extends AppCompatActivity {
     public void ApplyClick(View view) throws IOException {
         pbHorizontal.setProgress(100);
 
-        Book book = new Book(name, publisher, date, count, spinner, bAge, bMaker, selectedImg, email, phone, inst);
+        //Book book = new Book(name, publisher, date, count, spinner, bAge, bMaker, selectedImg, email, phone, inst);
 
 
 
-        books.add(book);
+        //books.add(book);
 
-        Log.e("ASDF", book.bookName + book.publisher);
-        Log.e("ASDF", book.bookName + book.publisher);
+        Log.e("ASDF", name);
+        //Log.e("ASDF", book.bookName + book.publisher);
 
 
         //newItem.bookName = bookName;
@@ -232,7 +232,9 @@ public class EndActivity extends AppCompatActivity {
         switch(id){
             case R.id.openList:
                 Intent intentl = new Intent(this, list_activity.class);
-                intentl.putExtra("NEW_ITEM", newItem);
+               /* intentl.putExtra("NEW_ITEM", newItem);
+                intentl.addFlags(Intent.FLAG_ACTIVITY_REORDER_TO_FRONT);*/
+                intentl.addFlags(Intent.FLAG_ACTIVITY_REORDER_TO_FRONT);
                 startActivity(intentl);
                 return true;
             case R.id.addBook:

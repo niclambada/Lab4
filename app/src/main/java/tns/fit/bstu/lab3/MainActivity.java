@@ -29,7 +29,7 @@ public class MainActivity extends AppCompatActivity {
     private RadioButton mCalendarRadionButton;
     private RadioButton mSpinnerRadioButton;
 
-
+    Book newItem;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -61,11 +61,37 @@ public class MainActivity extends AppCompatActivity {
                 }
             }
         });
+
+        Intent intent = getIntent();
+        newItem = (Book)intent.getSerializableExtra("NEW_ITEM");
     }
 
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
 
+        getMenuInflater().inflate(R.menu.main_menu, menu);
+        return true;
+    }
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        int id = item.getItemId();
 
+        switch(id){
+            case R.id.openList:
+                Intent intentl = new Intent(this, list_activity.class);
+                intentl.addFlags(Intent.FLAG_ACTIVITY_REORDER_TO_FRONT);
+                startActivity(intentl);
+                return true;
+            case R.id.addBook:
+                Intent intent = new Intent(this, MainActivity.class);
 
+                startActivity(intent);
+                return true;
+
+        }
+        //headerView.setText(item.getTitle());
+        return super.onOptionsItemSelected(item);
+    }
 
 
     public void onClick(View view) {

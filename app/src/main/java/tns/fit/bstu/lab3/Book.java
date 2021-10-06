@@ -23,9 +23,9 @@ public class Book implements Serializable {
     public String inst;
 
 
-    public  Book() {}
 
-    public Book(String bookName, String publisher, String date, String countOfPages,
+
+    /*public Book(String bookName, String publisher, String date, String countOfPages,
                 String bookShalve, String age, String maker, Uri bitmap, String email, String phone, String inst) {
 
         this.bookName = bookName;
@@ -39,7 +39,7 @@ public class Book implements Serializable {
         this.email = email;
         this.phone = phone;
         this.inst = inst;
-    }
+    }*/
 
     @Override
     public String toString() {

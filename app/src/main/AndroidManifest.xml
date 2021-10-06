@@ -11,7 +11,13 @@
         android:theme="@style/Theme.Lab3">
         <activity
             android:name=".list_activity"
-            android:exported="true" />
+            android:exported="true" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
         <activity
             android:name=".EndActivity"
             android:exported="true" />
