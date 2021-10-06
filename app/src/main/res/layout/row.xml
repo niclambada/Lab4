@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="6dp"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="5dp">
+
+        <TextView
+            android:id="@+id/bName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="72dp"
+
+            android:layout_marginTop="68dp"
+            android:text="TextView" />
+
+        <TextView
+            android:id="@+id/bookPublisher"
+            android:layout_width="78dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="116dp"
+            android:layout_marginTop="20dp"
+            android:text="TextView"
+            app:layout_constraintStart_toEndOf="@+id/textView8"
+            app:layout_constraintTop_toBottomOf="@+id/bName" />
+
+        <TextView
+            android:id="@+id/bookDate"
+            android:layout_width="59dp"
+            android:layout_height="21dp"
+            android:layout_marginStart="92dp"
+            android:layout_marginTop="20dp"
+            android:text="TextView" />
+
+        <TextView
+            android:id="@+id/bookCountOfPages"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="44dp"
+            android:layout_marginTop="16dp"
+            android:text="TextView" />
+
+        <TextView
+            android:id="@+id/bookShalve"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="120dp"
+            android:layout_marginTop="20dp"
+            android:text="TextView" />
+
+        <TextView
+            android:id="@+id/bookAge"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="12dp"
+            android:layout_marginTop="24dp"
+            android:text="TextView" />
+
+        <TextView
+            android:id="@+id/bookMaker"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="84dp"
+            android:layout_marginTop="16dp"
+            android:text="TextView" />
+
+        <ImageView
+            android:id="@+id/bookImage"
+            android:layout_width="232dp"
+            android:layout_height="175dp"
+            android:layout_marginStart="28dp"
+            android:layout_marginTop="20dp" />
+
+        <EditText
+            android:id="@+id/editTextPhone"
+            android:layout_width="104dp"
+            android:layout_height="33dp"
+            android:layout_marginStart="28dp"
+            android:layout_marginTop="32dp"
+            android:ems="10"
+            android:focusable="false"
+            android:hint="phone"
+            android:inputType="phone"
+            android:onClick="phoneCall"
+            android:textSize="5pt" />
+
+        <EditText
+            android:id="@+id/editTextTextEmailAddress"
+            android:layout_width="117dp"
+            android:layout_height="33dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="32dp"
+            android:ems="10"
+            android:focusable="false"
+            android:hint="example@mail.com"
+            android:inputType="textEmailAddress"
+            android:onClick="emailCall"
+            android:textSize="5pt"
+
+            />
+
+        <EditText
+            android:id="@+id/editTextTextPersonName2"
+            android:layout_width="119dp"
+            android:layout_height="33dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="32dp"
+            android:ems="10"
+            android:focusable="false"
+            android:hint="instagram"
+            android:inputType="textPersonName"
+            android:onClick="instCall"
+            android:textSize="5pt" />
+
+
+    </LinearLayout>
+</RelativeLayout>
